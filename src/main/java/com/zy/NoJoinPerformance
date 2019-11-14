@@ -1,0 +1,19 @@
+一、group by引起的
+set hive.map.aggr = true
+set hive.groupby.skewindata = true
+在group by的时候，把reduce的job设成两个来执行。
+
+count方面
+select a,count(disinct ) from table group by a
+修改为：
+select count(1)
+from
+(select * from table group by a) b
+
+二、大表join小表
+小表不超过1g，默认配置为25M。
+/*+mapjoin(a)*/
+
+三、大表join大表
+拆分：把没有数据倾斜的放到一起处理。
+发生倾斜做多个处理。
