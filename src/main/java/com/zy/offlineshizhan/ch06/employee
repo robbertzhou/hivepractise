@@ -1,0 +1,8 @@
+create table if not exists employees(
+);
+
+set hive.map.aggr=true;  //聚合函数更快，需要更多的内存
+select count(*),avg(salary) from employees;
+
+本地模式：
+set hive.exec.mode.local.auto = true;//尝试本地模式

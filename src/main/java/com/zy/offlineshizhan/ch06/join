@@ -1,0 +1,8 @@
+select a.ymd,a.price_close,b.price_close
+from stocks a join stocks b on a.ymd=b.ymd
+where a.symbol='AAPL' and b.symbol='IBM';
+//只支持等值连接。
+
+select a.ymd,a.price_close,b.price_close
+from stocks a join stocks b on a.ymd <= b.ymd
+where a.symbol='APPA' and b.symbol='IBM';
