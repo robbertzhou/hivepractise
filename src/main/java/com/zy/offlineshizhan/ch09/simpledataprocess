@@ -1,0 +1,7 @@
+from history
+insert overwrite table tt select *  where action=''
+insert overwrite table tt1 select * where action='ee';
+
+对一份history表数据进行多次处理。
+
+有时候会设计中间表。
