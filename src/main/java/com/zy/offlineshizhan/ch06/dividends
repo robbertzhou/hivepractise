@@ -1,0 +1,5 @@
+create table if not exists dividends(
+ymd STRING,
+dividend FLOAT)
+partitioned by (ex_change STRING,symbol STRING)
+row format delimited fields terminated by ',';

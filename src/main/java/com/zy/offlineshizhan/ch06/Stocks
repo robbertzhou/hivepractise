@@ -1,0 +1,15 @@
+CREATE TABLE stocks (ex_change STRING,symbol STRING,
+    ymd           STRING,
+    price_open    FLOAT,
+    price_high    FLOAT,
+    price_low     FLOAT,
+    price_close   FLOAT,
+    volume        INT,
+    price_adj_close    FLOAT)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+LOCATION '/data/stocks';
+
+exchange是关键字。
+
+
+
