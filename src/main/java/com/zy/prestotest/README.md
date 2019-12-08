@@ -1,0 +1,1 @@
+./presto.jar --server master.zy.com:8099 --catalog hive --schema default
